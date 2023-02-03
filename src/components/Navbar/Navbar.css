@@ -1,0 +1,58 @@
+ 
+.background {
+    color: black;
+}
+
+
+.navbar-container {
+    display: inline-block;
+    font-size: 20px;
+    content: normal;
+    font-family: Arial, sans-serif;
+    color: blue;
+    padding: 50px;
+    margin-top: -12rem;
+}
+
+
+/* .movi-logo {
+    top: 100px;
+    width: 200px;
+    height: 200px;
+    
+} */
+ 
+
+ /* .homeBtn {
+    color: white;
+    padding: 7rem;
+    text-decoration: none;
+    margin-top: -12rem;
+}  */
+
+
+/* .movieBtn {
+    color: white;
+    padding: 7rem;
+    text-decoration: none;
+}  */
+
+/* .tvShowsBtn {
+    color: white;
+    padding: 7rem;
+    text-decoration: none;
+
+} */
+
+/* .animeBtn {
+    color: white;
+    padding: 7rem;
+    text-decoration: none;
+} */
+
+ /* .profile {
+
+    color:white;
+    padding: 7rem;
+    text-decoration: none;
+}   */
