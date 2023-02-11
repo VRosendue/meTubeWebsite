@@ -1,10 +1,21 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import '../../css/navbar.css';
+import LoginModal from '../Login/LoginModal';
 
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  }
+
   return (
     <>
      <nav className='navbar'>
@@ -18,10 +29,19 @@ const Navbar: React.FC<NavbarProps> = () => {
 
             
             <Link to="/profile" className="profile" ><i className="fa fa-user-circle-o" aria-hidden="true"></i></Link>
-                
+            <button onClick={handleOpenModal} className="fa fa-user-circle-o" aria-hidden="true">
+
+            </button>
+            {showModal && (
+              <LoginModal 
+                show={showModal}
+                onHide={handleCloseModal}
+              />
+            )}
             
             
         </div>
+        
      </nav>
     </>
   )

@@ -9,9 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   
-    <App show={false} onHide={function (): void {
-      throw new Error('Function not implemented.');
-    } } />
+    <App />
   
 );
 

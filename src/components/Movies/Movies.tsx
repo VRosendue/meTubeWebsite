@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactComponentElement, useEffect, useState } from "react";
+
 
 interface Videos {
     id: number;
@@ -11,8 +12,38 @@ function MovieComponent() {
     const [upcomingMovies, setUpcomingMovies] = useState<Videos[]>([]);
     const [latestMovies, setLatestMovies] = useState<Videos[]>([]);
 
+
+    
    
 
+
+//     fetch('http://178.62.212.197/api/user/1', {
+//   method: 'GET',
+//   mode: 'no-cors',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   }
+// })
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
+    // checkLog(() => {
+    //     const dataFetch = async () => {
+    //         const response = await fetch("http://178.62.212.197/api/user/11")
+    //         const datea = await response.json();
+    //         console.log(datea);
+    //     }
+    // })
+        
+        
+
+      
+
+    
    
 
     useEffect(() => {
@@ -43,7 +74,7 @@ function MovieComponent() {
     return ( 
         <div>
             <h1>Latest</h1>
-            {latestMovies.slice(0, 10).map(movie => (
+            {latestMovies.slice(0, 15).map(movie => (
                 <div key={movie.id} onClick={() => handleMoviesClick(movie.id)}>
                     {/* <img src={`endpoint${movie.poster_path}`} alt={movie.name} /> */}
                     <p>{movie.name}</p>

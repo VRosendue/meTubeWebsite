@@ -6,16 +6,17 @@ import HomeComponent from './components/Home/Home';
 import MovieComponent from "./components/Movies/Movies";
 import TvComponent from './components/TVShows/TVShows';
 import AnimeComponent from './components/Anime/Anime';
+import Signup from './components/Signup/Signup';
 import './App.css';
 
 interface AppProps {
-  show: boolean;
-  onHide: () => void;
+  // show: boolean;
+  // onHide: () => void;
 }
 
 interface AppState {
-  showModal: boolean;
-  darkenBackground: boolean;
+  // showModal: boolean;
+  // darkenBackground: boolean;
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -27,20 +28,20 @@ class App extends React.Component<AppProps, AppState> {
     };
   }
 
-  handleOpenModal = () => {
-    this.setState({ showModal: true, darkenBackground: true});
-  }
+  // handleOpenModal = () => {
+  //   this.setState({ showModal: true, darkenBackground: true});
+  // }
 
-  handleCloseModal = () => {
-    this.setState({ showModal: false, darkenBackground: false});
-  }
+  // handleCloseModal = () => {
+  //   this.setState({ showModal: false, darkenBackground: false});
+  // }
   render() {
-    const {darkenBackground} = this.state;
-    let className = 'app-container';
-    if(darkenBackground) {
-      className += 'darken-background';
+  //   const {darkenBackground} = this.state;
+  //   let className = 'app-container';
+  //   if(darkenBackground) {
+  //     className += 'darken-background';
     
-  }
+  // }
   return (
      
   <BrowserRouter>
@@ -54,9 +55,11 @@ class App extends React.Component<AppProps, AppState> {
         <Route path='/movies'  element={ <MovieComponent/> } />
         <Route path='/tv-shows'  element= { <TvComponent/> } />
         <Route path='/anime'  element = { <AnimeComponent/> } />
-        <Route path='/profile'  element={ <LoginModal show={false} onHide={() => console.log('LoginModal hidden')} /> } />
+        {/* <Route path='/profile'  element={ <LoginModal show={false} onHide={() => console.log('LoginModal hidden')} /> } /> */}
+        <Route path='/signup' element={<Signup/>} />
         
       </Routes>
+      
     </div>
   </BrowserRouter>
   );
